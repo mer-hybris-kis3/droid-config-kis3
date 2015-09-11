@@ -1,32 +1,44 @@
-# Feel free to disable non-critical HA parts during devel by commenting out
-# Generated in hadk by executing: cd $ANDROID_ROOT; rpm/helpers/add_new_device.sh
+# Feel free to disable non-critical HA parts during devel by commenting lines out
+# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
 Description: Pattern with packages for kis3 HW Adaptation
 Name: jolla-hw-adaptation-kis3
 Requires:
 - pattern:jolla-hw-adaptation-hybris
 - pattern:jolla-hw-adaptation-hybris-droid-vibrator
+- pattern:jolla-ui-configuration-kis3
 
 - droid-hal-kis3
-- droid-hal-kis3-sailfish-config
 - droid-hal-kis3-img-boot
-- droid-hal-kis3-pulseaudio-settings
-- droid-hal-kis3-policy-settings
 - droid-hal-kis3-kernel-modules
-- droid-hal-kis3-preinit-plugin
+- droid-config-kis3-sailfish
+- droid-config-kis3-pulseaudio-settings
+- droid-config-kis3-policy-settings
+- droid-config-kis3-preinit-plugin
+- droid-hal-version-kis3
+
+- pulseaudio-modules-droid
 
 # These need to be per-device due to differing backends (fbdev, eglfs, hwc, ..?)
 - qt5-qtwayland-wayland_egl
 - qt5-qpa-hwcomposer-plugin
 - qtscenegraph-adaptation
 
+# GStreamer v0.10 multimedia support is being deprecated
 #- gstreamer0.10-droidcamsrc
 #- gstreamer0.10-omx
 #- gstreamer0.10-droideglsink
 #- nemo-qtmultimedia-plugins-gstvideotexturebackend
 
-# This will do good after sensors start to work:
-#- mce-plugin-libhybris
+# Add GStreamer v1.0 as standard
+- gstreamer1.0
+- gstreamer1.0-plugins-good
+- gstreamer1.0-plugins-base
+- gstreamer1.0-plugins-bad
+- nemo-gstreamer1.0-interfaces
+
+# This is needed for notification LEDs
+- mce-plugin-libhybris
 
 ## USB mode controller
 # Enables mode selector upon plugging USB cable:
@@ -43,14 +55,16 @@ Requires:
 # android diag mode only usable for certain android tools
 - usb-moded-diag-mode-android
 
-# jolla-rnd-device will enable usb-moded even when UI is not yet
-# brought up (useful during development, available since update10)
-- jolla-rnd-device
-
 # from update13, this is needed explicitly
 - bluez-configs-sailfish
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 - rfkill
+
+# enable device lock and allow to select untrusted software
+- jolla-devicelock-plugin-encsfa
+
+# Settings app needs this since update15
+- jolla-settings-layout
 
 Summary: Jolla HW Adaptation kis3
 

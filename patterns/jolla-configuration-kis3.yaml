@@ -1,11 +1,14 @@
-# Feel free to disable non-critical HA parts during devel by commenting out
-# Generated in hadk by executing: cd $ANDROID_ROOT; rpm/helpers/add_new_device.sh
+# Feel free to disable non-critical HA parts during devel by commenting lines out
+# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
 Description: Pattern with packages for kis3 configurations
 Name: jolla-configuration-kis3
 Requires:
 - pattern:jolla-hw-adaptation-kis3
-- pattern:jolla-configuration-sfe
+- pattern:jolla-sailfish-applications
+- pattern:jolla-ui-wayland
+# Early stages of porting benefit from these:
+- pattern:sailfish-porter-tools
 
 Summary: Jolla Configuration kis3
 
