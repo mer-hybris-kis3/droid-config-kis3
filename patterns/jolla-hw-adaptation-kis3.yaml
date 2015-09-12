@@ -9,6 +9,7 @@ Requires:
 - pattern:jolla-ui-configuration-kis3
 
 - droid-hal-kis3
+- droid-hal-kis3-detritus
 - droid-hal-kis3-img-boot
 - droid-hal-kis3-kernel-modules
 - droid-config-kis3-sailfish
