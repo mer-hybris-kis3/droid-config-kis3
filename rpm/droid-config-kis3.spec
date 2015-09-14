@@ -9,7 +9,7 @@
 %define dcd_path ./
 
 # Adjust this for your device
-%define pixel_ratio 1.0
+%define pixel_ratio 0.89
 
 # We assume most devices will
 %define have_modem 1
