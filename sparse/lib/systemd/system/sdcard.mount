@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount for Android in /sdcard
+Before=local-fs.target systemd-modules-load.service
+
+[Mount]
+What=/dev/mmcblk1p1
+Where=/sdcard
+Type=vfat
+Options=rw,uid=100000,gid=100000,dirsync,noatime,users,utf8,flush,discard
+TimeoutSec=5
+
+[Install]
+WantedBy=local-fs.target
