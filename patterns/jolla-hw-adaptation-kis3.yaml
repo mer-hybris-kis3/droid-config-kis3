@@ -38,6 +38,9 @@ Requires:
 - gstreamer1.0-plugins-bad
 - nemo-gstreamer1.0-interfaces
 
+- gstreamer1.0-droid
+- gstreamer1.0-droid-tools
+
 # This is needed for notification LEDs
 - mce-plugin-libhybris
 
