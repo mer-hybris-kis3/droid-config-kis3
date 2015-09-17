@@ -67,5 +67,8 @@ Requires:
 # Settings app needs this since update15
 - jolla-settings-layout
 
+# to make the maps happy, works since 1.1.7
+- geoclue-provider-hybris-community
+
 Summary: Jolla HW Adaptation kis3
 
