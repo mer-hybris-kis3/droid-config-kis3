@@ -1,0 +1,24 @@
+[apps/jolla-camera/primary/image]
+imageResolution='2048x1536'
+videoResolution='640x480'
+viewfinderResolution='640x480'
+isoValues=[0, 100, 200, 400]
+whiteBalanceValues=[0, 3, 2, 6, 5]
+focusDistanceValues=[2]
+flashValues=[2]
+exposureCompensationValues=[4, 2, 0, -2, -4]
+imageResolution_4_3='2048x1536'
+viewfinderResolution_4_3='640x480'
+resolutionText_4_3='camera_settings-me-4-3-2m'
+focusDistance=2
+
+[apps/jolla-camera/primary/video]
+imageResolution='640x480'
+videoResolution='640x480'
+viewfinderResolution='640x480'
+isoValues=[0, 100, 200, 400]
+whiteBalanceValues=[0, 3, 2, 6, 5]
+focusDistanceValues=[2]
+flashValues=[2]
+exposureCompensationValues=[4, 2, 0, -2, -4]
+focusDistance=2
