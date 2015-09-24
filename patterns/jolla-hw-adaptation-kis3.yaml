@@ -70,6 +70,9 @@ Requires:
 # Settings app needs this since update15
 - jolla-settings-layout
 
+# Since 1.1.9 this needs to be added explicitly for cellular devices
+- pattern:jolla-sailfish-cellular-apps
+
 # to make the maps happy, works since 1.1.7
 - geoclue-provider-hybris-community
 
