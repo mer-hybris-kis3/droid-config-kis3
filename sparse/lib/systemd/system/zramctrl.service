@@ -1,0 +1,11 @@
+[Unit]
+Description=zRAM (compressed RAM block device)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/zramctrl start
+ExecStop=/usr/sbin/zramctrl stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

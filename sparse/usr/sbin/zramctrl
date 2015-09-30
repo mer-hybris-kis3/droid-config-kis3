@@ -1,0 +1,17 @@
+#!/bin/bash
+
+start() {
+  ZRAM_SIZE=201326592 # 192mb
+  echo $ZRAM_SIZE > /sys/block/zram0/disksize
+
+  mkswap /dev/block/zram0
+  swapon /dev/block/zram0
+}
+
+stop() {
+  swapoff /dev/block/zram0
+}
+
+case $1 in
+  start|stop) "$1" ;;
+esac
