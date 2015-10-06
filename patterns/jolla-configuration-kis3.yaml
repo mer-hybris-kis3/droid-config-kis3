@@ -10,15 +10,5 @@ Requires:
 # Early stages of porting benefit from these:
 - pattern:sailfish-porter-tools
 
-# Pre-installed applications, since we don't support OTA well enough:
-- sailfish-office
-- jolla-calculator
-- jolla-email
-- jolla-notes
-- jolla-clock
-- jolla-mediaplayer
-- jolla-calendar
-- sailfish-weather
-
 Summary: Jolla Configuration kis3
 

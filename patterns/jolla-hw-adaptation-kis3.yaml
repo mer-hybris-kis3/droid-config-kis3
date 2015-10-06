@@ -39,7 +39,6 @@ Requires:
 - nemo-gstreamer1.0-interfaces
 
 - gstreamer1.0-droid
-- gstreamer1.0-droid-tools
 
 # This is needed for notification LEDs
 - mce-plugin-libhybris
@@ -70,11 +69,11 @@ Requires:
 # Settings app needs this since update15
 - jolla-settings-layout
 
-# Since 1.1.9 this needs to be added explicitly for cellular devices
+# For devices with working cellular modem:
 - pattern:jolla-sailfish-cellular-apps
 - telepathy-ring
 
-# to make the maps happy, works since 1.1.7
+# For devices where test_gps eventually gets a fix:
 - geoclue-provider-hybris-community
 
 Summary: Jolla HW Adaptation kis3
