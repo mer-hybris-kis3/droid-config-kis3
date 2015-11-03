@@ -19,6 +19,8 @@ Requires:
 - droid-hal-version-kis3
 
 - pulseaudio-modules-droid
+# for audio recording to work:
+- qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 
 # These need to be per-device due to differing backends (fbdev, eglfs, hwc, ..?)
 - qt5-qtwayland-wayland_egl
