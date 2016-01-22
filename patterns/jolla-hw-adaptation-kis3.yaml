@@ -78,5 +78,8 @@ Requires:
 # For devices where test_gps eventually gets a fix:
 - geoclue-provider-hybris-community
 
+# for audio during calls
+- pulseaudio-modules-droid-glue
+
 Summary: Jolla HW Adaptation kis3
 
